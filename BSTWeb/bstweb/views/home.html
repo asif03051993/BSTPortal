@@ -1,0 +1,118 @@
+<uib-tabset type="pills" ng-init="init()">
+    <uib-tab heading="Binary Search Tree" ng-click="printBinaryTree()">
+    	<div class="tabElement container">
+		  <div class="view">
+		  		<div ng-bind-html="binaryTree"></div>
+		  </div>
+		</div>
+    </uib-tab>
+    <uib-tab heading="Insert" ng-click="clearInsert()">
+    	<div class="tabElement container">
+    		<div class="row">
+		        <div class="col-md-9 view">
+		        	<table class="table text-center">
+				      <thead>
+				        <tr><th>Insert Node</th></tr>
+				      </thead>
+				      <tbody>
+				      	<tr>
+				           <td>Key :</td>
+				           <td><input type="text" class="form-control" ng-model="dataToInsert"  placeholder="Data to be inserted into BST" >
+				           </td>
+				        </tr>
+				      </tbody>
+				    </table>
+				    <div class="modal-footer">
+				            <button type="button" class="btn btn-info" ng-click="insertNode(dataToInsert)">
+				            	<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insert
+				            </button>
+                    </div> 
+			  	</div>
+			</div>
+		</div>
+    </uib-tab>
+    <uib-tab heading="Remove" ng-click="clearRemove()">
+    	<div class="tabElement container">
+    		<div class="row">
+		        <div class="col-md-9 view"> 
+		        	<table class="table text-center">
+				      <thead>
+				        <tr><th>Remove Node</th></tr>
+				      </thead>
+				      <tbody>
+				      	<tr>
+				           <td>Key :</td>
+				           <td><input type="text" class="form-control" ng-model="dataToRemove"  placeholder="Data to be removed from BST" >
+				           </td>
+				        </tr>
+				      </tbody>
+				    </table>
+				    <div class="modal-footer">
+				            <button type="button" class="btn btn-info" ng-click="removeNode(dataToRemove)">
+				            	<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span> Remove
+				            </button>
+                    </div> 
+			  	</div>  
+			</div>
+		</div>		
+    </uib-tab> 
+    <uib-tab heading="Search" ng-click="clearSearch()">
+    	<div class="tabElement container">
+    		<div class="row">
+		        <div class="col-md-9 view"> 
+		        	<table class="table text-center">
+				      <thead>
+				        <tr><th>Search Node</th></tr>
+				      </thead>
+				      <tbody>
+				      	<tr>
+				           <td>Key :</td>
+				           <td><input type="text" class="form-control" ng-model="dataToSearch"  placeholder="Data to search in BST" >
+				           </td>
+				        </tr>
+				      </tbody>
+				    </table>
+				    <div ng-if="positions != null">
+				    	<div>Pre Order : {{positions.preorder}}</div>
+				    	<div>In Order : {{positions.inorder}}</div>
+				    	<div>Post Order : {{positions.postorder}}</div>
+				    </div>
+				    <div class="modal-footer">
+				            <button type="button" class="btn btn-info" ng-click="searchNode(dataToSearch)">
+				            	<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+				            </button>
+                    </div> 
+			  	</div>  
+			</div>
+		</div>		
+    </uib-tab>
+    <uib-tab heading="Stats"  ng-click="getStats()">
+    	<div class="tabElement container">
+    		<div class="row">
+		        <div class="col-md-9 view"> 
+		        	<table class="table text-center">
+				      <thead>
+				        <tr><th>Statistics</th></tr>
+				      </thead>
+				      <tbody>
+				      	<tr>
+				           <td>Count :</td>
+				           <td>{{stat.count}}</td>
+				        </tr>
+				        <tr>
+				           <td>Min Height :</td>
+				           <td>{{stat.minHeight}}</td>
+				        </tr>
+				        <tr>
+				           <td>Max Height :</td>
+				           <td>{{stat.maxHeight}}</td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>  
+			</div>
+		</div>		
+    </uib-tab>
+  </uib-tabset>
+
+<toaster-container toaster-options="{'position-class': 'toast-bottom-right'}"></toaster-container>

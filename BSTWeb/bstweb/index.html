@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html data-ng-app="bstWeb">
+
+<head>
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui=1">
+    <meta http-equiv="Cache-Control" content="max-age=0, no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="./bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bower_components/AngularJS-Toaster/toaster.css">
+    <!-- app css -->
+    <link rel="stylesheet" type="text/css" href="pkgs/css/styles.css">
+    <title>Binary Serach Tree</title>
+
+</head>
+
+<body class="ng-app:app" id="ng-app">
+
+    <header ng-show="isHeaderVisible"></header>
+    <div data-ng-view class="container-fluid"></div>
+
+    <!-- Load lib script  -->
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/AngularJS-Toaster/toaster.min.js"></script>
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="./bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!-- Load app script  -->
+    <script src="apps.js"></script>
+<!--    <script src="dist/js/all.js"></script>-->
+    <script src="config.js"></script>
+    <script src="controllers/home.js"></script>
+    <script src="models/bstservice.js"></script>
+    
+</body>
+
+</html>
