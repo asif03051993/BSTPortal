@@ -20,7 +20,7 @@ No auth required for user as it will be a single session application. So if the 
 
 Solution:
 1. BSTService : Backend (Rest services built using Vertx in Java)
-2. BSTFrontEnd : FrontEnd (Built using AngularJs, BootstrapCSS, Express and NodeJs )
+2. BSTWeb : FrontEnd (Built using AngularJs, BootstrapCSS, Express and NodeJs )
 
 Assumptions: Binary Search Tree doesn't contain any duplicates. If duplicate node is inserted, it will throw error.
 
@@ -36,6 +36,6 @@ Steps:
 3. Run class "BSTServiceHttpVertbox.java" to start backend.
 
 (FrontEnd)
-1. Go to BSTPortal folder.
+1. Go to BSTWeb folder.
 2. Run 'setup.bat' on Windows (or) 'setup.sh' in linux.
 3. Start now by visting "http://localhost:8080/home"
